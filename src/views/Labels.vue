@@ -1,5 +1,7 @@
 <template>
-  <layout>Labels.vue</layout>
+  <layout>
+    <p>Labels.vue</p>
+  </layout>
 </template>
 <script lang="ts">
   export default {
