@@ -16,7 +16,10 @@
   import Tags from '@/components/Money/Tags.vue';
   import {Component, Watch} from 'vue-property-decorator';
 
-  const recordList: Record[] = JSON.parse(window.localStorage.getItem('recordList') || '[]');
+  const model = require('@/model.js').default;
+  console.log(model);
+  const recordList: Record[] = model.fetch();
+  //const recordList: Record[] = JSON.parse(window.localStorage.getItem('recordList') || '[]');
   type Record = {
     tags: string[];
     notes: string;
@@ -52,7 +55,8 @@
     }
     @Watch('recordList')
     onRecordListChange(){
-      window.localStorage.setItem('recordList',JSON.stringify(this.recordList));
+      //window.localStorage.setItem('recordList',JSON.stringify(this.recordList));
+      model.save(this.recordList);
     }
   }
 
