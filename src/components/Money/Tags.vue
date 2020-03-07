@@ -6,7 +6,7 @@
     <ul class="current">
       <li v-for="tag in dataSource" :key="tag.id"
           :class="{selected:selectedTags.indexOf(tag)>=0}"
-          @click="toggle(tag.name)">{{tag.name}}
+          @click="toggle(tag)">{{tag.name}}
       </li>
     </ul>
   </div>
