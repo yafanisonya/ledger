@@ -22,7 +22,7 @@
   //const model = require('@/model.js').default;
   const recordList = recordListModel.fetch();
   //const recordList: Record[] = JSON.parse(window.localStorage.getItem('recordList') || '[]');
-  const tagList = tagListModel.fetch();
+  //const tagList = tagListModel.fetch();
 
 
   @Component({
@@ -30,7 +30,7 @@
   })
   export default class Money extends Vue{
     //tags = ['餐饮','购物','交通','娱乐'];
-    tags = tagList;
+    tags = window.tagList;
     recordList: RecordItem[] = recordList;
     record: RecordItem = {
       tags:[], notes:'', type:'-', amount:0
