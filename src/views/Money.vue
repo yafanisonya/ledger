@@ -6,7 +6,9 @@
     <div class="notes">
       <FormItem field-name="备注" placeholder="在这里输入备注" @update:value="onUpdateNotes"/>
     </div>
-    <Tags :data-source.sync="tags" @update:value="onUpdateTags"/>
+    <Tags/>
+    {{count}}
+    <button @click="$store.commit('increment',10)">+10</button>
     </layout>
 </template>
 
@@ -20,20 +22,21 @@
   import store from '@/store/index2';
 
   @Component({
-    components:{NumberPad,Types,FormItem,Tags}
+    components:{NumberPad,Types,FormItem,Tags},
+    computed:{
+      count(){
+        return this.$store.state.count;
+      }
+    }
   })
   export default class Money extends Vue{
     //tags = ['餐饮','购物','交通','娱乐'];
-    tags = store.tagList;
     recordList = store.recordList;
     record: RecordItem = {
       tags:[], notes:'', type:'-', amount:0
     };
     onUpdateNotes(value: string){
       this.record.notes = value;
-    }
-    onUpdateTags(value: string[]){
-      this.record.tags = value;
     }
     onUpdateAmount(value: string){
       this.record.amount = parseFloat(value);
