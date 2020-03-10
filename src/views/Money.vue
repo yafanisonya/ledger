@@ -19,13 +19,11 @@
 
   @Component({
     components:{NumberPad,Types,FormItem,Tags},
-    computed:{
-      recordList(){
-        return this.$store.state.recordList;
-      }
-    }
   })
   export default class Money extends Vue{
+    get recordList(){
+      return this.$store.state.recordList;
+    }
     record: RecordItem = {
       tags:[], notes:'', type:'-', amount:0
     };
