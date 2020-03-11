@@ -1,6 +1,6 @@
 <template>
   <layout>
-    <Tabs class-prefix="type" :data-source="typeList" :value.sync="type"></Tabs>
+    <Tabs class-prefix="type" :data-source="recordTypeList" :value.sync="type"></Tabs>
     <Tabs class-prefix="interval" :data-source="intervalList" :value.sync="interval"></Tabs>
     <div>
       type:{{type}}
@@ -23,7 +23,7 @@
     type = '-';
     interval = 'day';
     intervalList = intervalList;
-    typeList = recordTypeList;
+    recordTypeList = recordTypeList;
   }
 </script>
 
@@ -36,5 +36,8 @@
         display: none;
       }
     }
+  }
+  ::v-deep .interval-tabs-item{
+    height: 48px;
   }
 </style>
