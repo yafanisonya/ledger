@@ -46,7 +46,7 @@
       }
       this.$store.commit('createRecord',this.record);
       if(this.$store.state.createRecordError === null){
-        window.alert('已保存');
+        window.alert('记账成功');
         this.record.notes = '';
       }
     }

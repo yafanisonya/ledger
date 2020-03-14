@@ -34,9 +34,9 @@
       const input = button.textContent as string;
       //if (this.output.length == 9 && this.output.indexOf('.') == 6 ){return} 十万无法添加小数点后两位
       if(this.output.indexOf('.') == -1 ){
-        if( this.output.length === 6 ){return}
+        if( this.output.length === 6 ){return window.alert('输入金额不能大于1,000,000')}
       }else{
-        if (this.output.indexOf('.') == this.output.length - 3){return}
+        if (this.output.indexOf('.') == this.output.length - 3){return window.alert('请输入小数点后两位金额 0.01-0.99')}
       }
       // 显示框为0，若输入1-9则直接替换；若输入点则追加
       if(this.output === '0'){
