@@ -1,9 +1,17 @@
+type RootState = {
+  recordList : RecordItem[],
+  createRecordError: Error | null,
+  createTagError: Error | null,
+  tagList : Tag[],
+  currentTag?: Tag
+}
+
 type RecordItem = {
-  tags: string[];
+  tags: Tag[];
   notes: string;
   type: string;
   amount: number;
-  createdAt?: Date;
+  createdAt?: string;
 }
 type Tag ={
   id: string;
@@ -18,11 +26,5 @@ type TagListModel = {
   save: () => void;
 }
 interface Window {
-  // tagList: Tag[];
-  // createTag: (name: string) => void;
-  // findTag: (id: string) => Tag | undefined;
-  // removeTag: (id: string) => boolean;
-  // updateTag: TagListModel['update'];
-  // recordList: RecordItem[];
-  // createRecord: (record: RecordItem) => void;
+
 }
