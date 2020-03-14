@@ -72,17 +72,17 @@
     .output{
       @extend %clearFix;
       @extend %innerShadow;
-      font-size:36px;
+      font-size:32px;//36px;
       font-family:Consolas,monospace;
-      padding:9px 16px;
+      padding:4px 8px;  // 9px 16px;
       text-align:right;
-      height: 72px;
+      height: 56px; //72px;
     }
     .buttons{
       @extend %clearFix;
       > button{
         width: 25%;
-        height: 64px;
+        height: 56px;//64px;
         float: left;
         background: transparent;
         border: none;
@@ -92,7 +92,7 @@
           color: #000;
         }
         &.ok{
-          height: 64*3px;
+          height: 56*3px;//64*3px;
           float: right;
         }
         &.zero{

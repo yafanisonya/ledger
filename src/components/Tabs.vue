@@ -36,10 +36,11 @@
     background: #c4c4c4;
     display: flex;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: bold;
     &-item {
       width: 50%;
-      height:64px;
+      height:56px; //64px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -50,7 +51,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 4px;
+        height: 3px;//4px;
         background: #333;
       }
     }
