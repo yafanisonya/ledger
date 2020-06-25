@@ -32,7 +32,6 @@
     inputContent(event: MouseEvent){
       const button = (event.target as HTMLButtonElement);
       const input = button.textContent as string;
-      //if (this.output.length == 9 && this.output.indexOf('.') == 6 ){return} 十万无法添加小数点后两位
       if(this.output.indexOf('.') == -1 ){
         if( this.output.length === 6 ){return window.alert('输入金额不能大于1,000,000')}
       }else{
